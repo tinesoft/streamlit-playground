@@ -6,14 +6,10 @@ if [ ! -f .venv/bin/activate ]; then
     virtualenv .venv
 fi
 
-#activate the virtual environment for this terminal session
-echo "✅ Setup done" 
-
 # Activate the virtual environment for this terminal session
-echo ""
-echo "Please don't forget to run the following command in your terminal..."
-echo "⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️"
-echo "source .school.venv/bin/activate"
-echo "⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️"
-echo "...(to activate the virtual env) before installing Python dependencies!"
-echo ""
+source .venv/bin/activate
+
+echo "⌛️ Installing packages..." 
+pip install -r requirements.txt
+
+echo "✅ Setup done" 
