@@ -16,6 +16,10 @@ st.caption("a ChatGPT-like app, powered with Streamlit 🚀")
 
 st.divider()
 
+# Initialize the chat history with a welcome message if it doesn't exist
+if 'messages' not in st.session_state:
+    st.session_state.messages = [{ "role": "assistant", "content": "Hello SFEIRian, how can I help you?"}]
+ 
 # Sidebar for chat history and clear button
 with st.sidebar:
     col1, col2 =  st.columns([3,1], vertical_alignment="bottom")
@@ -23,10 +27,9 @@ with st.sidebar:
     col2.button("Clear", on_click=clear_history)
     st.divider()
 
-
-# Initialize the chat history with a welcome message if it doesn't exist
-if 'messages' not in st.session_state:
-    st.session_state.messages = [{ "role": "assistant", "content": "Hello SFEIRian, how can I help you?"}]
+    for message in st.session_state.messages:
+      if message["role"] == "user":
+        st.write(message["content"][0:40]+"...")
 
 # Display chat history
 for message in st.session_state.messages:
