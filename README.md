@@ -1,7 +1,8 @@
 # A playground to experiment with Streamlit library
 
+> [Streamlit](https://streamlit.io) is a powerful opensource python library  that simplifies the creation of **interactive web applications** for **data science** and **AI projects**.
 
-[Streamlit](https://streamlit.io) is a powerful opensource python library  that simplifies the creation of **interactive web applications** for **data science** and **AI projects**.
+<p align="center"><img src="./images/llm_chat.png"></p>
 
 
 This project is currently composed of 2 sample applications:
